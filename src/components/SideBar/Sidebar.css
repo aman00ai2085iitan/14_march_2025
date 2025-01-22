@@ -1,0 +1,96 @@
+/* Sidebar container */
+.sidebar {
+    width: 16rem; /* Fixed width */
+    height: 100vh; /* Full height */
+    background-color: white;
+    border-right: 1px solid #e5e7eb; /* Light gray border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Logo Section */
+  .sidebar-logo {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .logo-image {
+    width: 100px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  /* Configurations Title */
+  .sidebar-title {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #9ca3af; /* Gray color */
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  /* Buttons Container */
+  .sidebar-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  
+  .sidebar-buttons button {
+    margin-bottom: 0.5rem; /* Adds space between buttons */
+  }
+  
+  /* Individual Button */
+  .sidebar-button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Reduced padding to make buttons smaller */
+    text-align: left;
+    font-size: 1rem; /* Font size for text */
+    font-weight: 500;
+    color: #374151; /* Dark gray */
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    width: auto;
+    white-space: nowrap; /* Ensures text does not wrap */
+  }
+  
+  .sidebar-button:hover {
+    background-color: #f3f4f6; /* Light gray */
+    color: #1f2937; /* Darker gray */
+  }
+  
+  .sidebar-button:active {
+    background-color: #e5e7eb; /* Slightly darker gray */
+  }
+  
+  .sidebar-button:focus {
+    outline: 2px solid #3b82f6; /* Blue outline for accessibility */
+    outline-offset: 2px;
+  }
+  
+  .sidebar-button.active {
+    background-color: #e0e7ff; /* Light blue background for active button */
+    color: #4f46e5; /* Blue color for text */
+  }
+  
+  /* Icon Styles */
+  .sidebar-icon {
+    width: 30px; /* Small icon size */
+    height: 30px;
+    margin-right: 1rem;
+     /* Space between text and icon */
+    object-fit: contain;
+  }
+  

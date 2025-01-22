@@ -1,0 +1,211 @@
+.coach-page {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.first-line-inputs {
+  display: flex;
+  flex-direction: column; /* Ensure inputs are stacked vertically */
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Make sure input-group takes full width */
+}
+
+.input-group label {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Ensure input takes full width */
+}
+
+.typebox {
+  margin-bottom: 20px;
+}
+
+.typebox select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.checkbox-group label {
+  white-space: nowrap;
+  flex: 1 1 15%; /* Responsive checkbox width */
+  font-size: 15px;
+}
+
+.first-row, .second-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.table-container {
+  margin-top: 0px;
+  overflow-x: auto; /* Enable horizontal scroll for smaller screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #e0e0e0;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.add-coach-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #0056b3;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width: 8%;
+  transition: background-color 0.3s ease;
+}
+
+.add-coach-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-button, .delete-button {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.search-bar {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.systems-column {
+  white-space: pre-wrap; /* Allow line breaks */
+}
+
+
+.coach-records-heading {
+  margin-bottom: 0px; /* Adjust spacing */
+}
+
+
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.checkbox-item {
+  flex: 1 1 calc(16.66% - 15px); /* Default: 6 items per row */
+  max-width: calc(16.66% - 15px);
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Prevents label text from wrapping */
+}
+
+@media (max-width: 1200px) {
+  .checkbox-item {
+    flex: 1 1 calc(25% - 15px); /* 4 items per row for medium screens */
+    max-width: calc(25% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbox-item {
+    flex: 1 1 calc(33.33% - 15px); /* 3 items per row for tablets */
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+@media (max-width: 576px) {
+  .checkbox-item {
+    flex: 1 1 calc(50% - 15px); /* 2 items per row for small screens */
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 400px) {
+  .checkbox-item {
+    flex: 1 1 calc(100% - 15px); /* 1 item per row for very small screens */
+    max-width: calc(100% - 15px);
+  }
+}
