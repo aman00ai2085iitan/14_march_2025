@@ -1,0 +1,26 @@
+.flash-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    animation: fadeInOut 3s ease-in-out;
+  }
+  
+  .flash-message.success {
+    background-color: #28a745;
+  }
+  
+  .flash-message.error {
+    background-color: #dc3545;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+  

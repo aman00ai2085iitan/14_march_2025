@@ -11,6 +11,12 @@
   gap: 10px;
 }
 
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .first-line-inputs {
   display: flex;
   flex-direction: column; /* Ensure inputs are stacked vertically */
@@ -209,3 +215,57 @@ tr:hover {
     max-width: calc(100% - 15px);
   }
 }
+.first-line-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between; /* Space between the two input groups */
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.input-group {
+  flex: 1; /* Allow input groups to grow equally */
+  margin-right: 10px; /* Space between input groups */
+}
+
+.input-group:last-child {
+  margin-right: 0; /* Remove margin from the last input group */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%; /* Full width */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+.pagination a {
+  text-decoration: none; /* Remove underline */
+}
+
+.pagination span {
+  text-decoration: none; /* Ensure the span also has no underline */
+}
+
+.pagination-container {
+  width: 100%; /* or a specific width */
+  display: flex;
+  justify-content: center;
+}
+
+/* Coach.css */
+

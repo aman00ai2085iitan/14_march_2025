@@ -1,0 +1,87 @@
+/* EditRole.css */
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the modal is on top */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: white; /* White background for the modal */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    padding: 20px; /* Padding inside the modal */
+    width: 400px; /* Fixed width for the modal */
+    max-width: 90%; /* Responsive max width */
+  }
+  
+  /* Modal Header */
+  .modal-content h2 {
+    margin: 0 0 20px; /* Margin for spacing */
+    font-size: 1.5rem; /* Font size for the header */
+    color: #333; /* Dark gray color for the text */
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+  }
+  
+  /* Form Labels */
+  .modal-body label {
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+  }
+  
+  /* Input Fields */
+  .modal-body input,
+  .modal-body select {
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+  }
+  
+  /* Button Styles */
+  .btn {
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size for buttons */
+    margin-right: 10px; /* Space between buttons */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; /* Bootstrap secondary color */
+    color: white; /* White text */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+  }
+  
+  /* Close Button */
+  .btn-secondary {
+    float: right; /* Align close button to the right */
+  }

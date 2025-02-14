@@ -82,7 +82,7 @@
   
   .sidebar-button.active {
     background-color: #e0e7ff; /* Light blue background for active button */
-    color: #4f46e5; /* Blue color for text */
+    color: #000000; /* Blue color for text */
   }
   
   /* Icon Styles */
@@ -93,4 +93,144 @@
      /* Space between text and icon */
     object-fit: contain;
   }
+  .sidebar-buttons a {
+    text-decoration: none; /* Remove underline from links */
+  }
   
+  .sidebar-button {
+    display: flex; /* Ensure the button contents are aligned */
+    align-items: center; /* Center the icon and text vertically */
+    padding: 10px; /* Add some padding for better spacing */
+    border: none; /* Remove default button border */
+    background: none; /* Remove default button background */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: inherit; /* Inherit text color from parent */
+  }
+  
+  .sidebar-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Optional: Add a hover effect */
+  }
+
+  
+
+  /* Sidebar.css */
+
+.sidebar {
+  /* Your existing styles */
+}
+
+.sidebar-logo {
+  /* Your existing styles */
+}
+
+.sidebar-title {
+  /* Your existing styles */
+  color: black; /* Change title color to black */
+}
+
+.sidebar-buttons {
+  /* Your existing styles */
+}
+
+.sidebar-button {
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  color: black; /* Set text color to black */
+  cursor: pointer; /* Change cursor to pointer */
+  display: flex; /* Align icon and text */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Add some padding */
+  width: 100%; /* Make button take full width */
+}
+
+.sidebar-button img {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.sidebar-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Optional: Add hover effect */
+}
+
+
+.sidebar {
+  width: 250px; /* Default width */
+  transition: width 0.3s ease; /* Smooth transition */
+}
+
+.sidebar.minimized {
+  width: 80px; /* Width when minimized */
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sidebar-button img {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar.minimized .sidebar-title {
+  display: none; /* Hide title when minimized */
+}
+
+.sidebar.minimized .sidebar-button img {
+  margin-right: 0; /* Remove margin when minimized */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Space between the buttons */
+  padding: 10px; /* Add some padding */
+}
+
+.sidebar-toggle,
+.sidebar-button {
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 1.2em; /* Adjust font size for icons */
+}
+
+.sidebar-toggle i,
+.sidebar-button i {
+  margin: 0 5px; /* Add some margin around icons */
+}
+
+.sidebar {
+  background-color: white; /* Default background color */
+  color: black; /* Default text color */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.sidebar.night-mode {
+  background-color: #333; /* Dark background for night mode */
+  color: white; /* Light text color for night mode */
+}
+
+.sidebar-button {
+  color: inherit; /* Inherit text color */
+}
+
+.sidebar-button i {
+  margin-right: 5px; /* Space between icon and text */
+}

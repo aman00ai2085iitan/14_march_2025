@@ -1,237 +1,516 @@
-/* General styling for the container */
-.sensor-container {
-  font-family: 'Arial', sans-serif;
-  margin: 20px;
-  padding: 30px;
-  background-color: #f8f9fc;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.sensor-config-container {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  padding: 2rem;
 }
 
-/* Heading styling */
-h2, h3 {
-  color: #2d3e50;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-/* Styling for sensor list */
-.sensor-list {
+.sensor-config-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sensor-config-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.coach-id {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coach-id label {
+  font-weight: 500;
+}
+
+.coach-id input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.save-button {
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+ 
+ 
 }
 
 .sensor-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.sensor-item input {
-  margin-right: 8px;
-}
-
-/* Styling for sensor configuration section */
-.sensor-config {
-  margin-top: 30px;
-}
-
-.sensor-table {
-  margin-top: 20px;
-  overflow-x: auto;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.sensor-table table {
-  width: 100%;
+  background-color: #f5f5f5;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
+  margin-bottom: auto;
 }
 
-.sensor-table th,
-.sensor-table td {
-  padding: 14px;
-  text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+.sensor-checkbox {
+  align-self: flex-start;
 }
 
-.sensor-table th {
-  background-color: #f7f7f7;
-  color: #333;
-  font-size: 16px;
+.sensor-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sensor-details {
+  text-align: center;
+  display: flex;
+ 
+  gap: 0.5rem;
+}
+
+.sensor-name {
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
-.sensor-table td {
-  font-size: 14px;
+.sensor-status {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
 }
 
-.sensor-table input,
-.sensor-table select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-sizing: border-box;
-  background-color: #fff;
-  transition: all 0.3s ease;
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 0.5rem;
 }
 
-.sensor-table input:focus,
-.sensor-table select:focus {
-  outline: none;
-  border-color: #4CAF50;
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+.status-indicator.active {
+  background-color: #4caf50;
 }
 
-/* Record controls section */
-.record-controls {
+.status-indicator.inactive {
+  background-color: #ccc;
+}
+
+.sensor-config-section {
+  margin-top: 2rem;
+}
+
+.sensor-config-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sensor-config-table {
+  overflow-x: auto;
+}
+
+.records-controls {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0px;
 }
 
-.record-controls input,
-.record-controls select {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  width: 100%;
-  font-size: 14px;
-  background-color: #fff;
-  transition: all 0.3s ease;
+.records-controls input,
+.records-controls select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.record-controls button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
+.sort-button {
+  background-color: #0077b6;
+  color: #fff;
   border: none;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
   cursor: pointer;
-  font-size: 16px;
-  width: 180px;
-  transition: all 0.3s ease;
 }
 
-.record-controls button:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
-}
-
-.record-controls input:focus,
-.record-controls select:focus {
-  border-color: #4CAF50;
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
-}
-
-/* Table for sensor records */
-table {
+.records-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 30px;
 }
 
-table th,
-table td {
-  padding: 14px;
+.records-table th,
+.records-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.records-table th {
   text-align: left;
-  border: 1px solid #ddd;
-}
-
-table th {
-  background-color: #f7f7f7;
-  color: #333;
+  background-color: #f5f5f5;
   font-weight: 500;
 }
 
-table tr:nth-child(even) {
+.records-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-table tr:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
+/* Sensor Configuration Section */
+.sensor-config-section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-table td {
-  font-size: 14px;
+.sensor-config-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-table td button {
-  padding: 6px 12px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+/* Form Grid Layout */
+.sensor-config-textbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px;
+  align-items: center;
 }
 
-table td button:hover {
-  background-color: #45a049;
+.sensor-config-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  align-items: center;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .sensor-list {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .record-controls {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  table th,
-  table td {
-    padding: 10px;
-  }
+.sensor-config-row label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
 }
 
-/* Styling for the coach number and save button */
-.coach-no-save {
+.sensor-config-row input,
+.sensor-config-row select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sensor-config-row input:focus,
+.sensor-config-row select:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Sensor ID Styling */
+.sensor-id {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 30px;
 }
 
-.coach-no-save input {
-  padding: 12px;
-  border-radius: 6px;
+.sensor-id label {
+  margin-bottom: 5px;
+}
+
+.sensor-id input {
+  font-size: 1rem;
+  padding: 8px;
   border: 1px solid #ddd;
-  width: 100%;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
+  border-radius: 4px;
 }
 
-.coach-no-save input:focus {
-  border-color: #4CAF50;
+/* Dropdown Menus */
+.sensor-config-row select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 viewBox%3D%270 0 4 5%27%3E%3Cpath fill%3D%27%23333%27 d%3D%27M2 0L0 2h4z%27/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
 }
 
-.coach-no-save button {
-  padding: 12px 25px;
-  background-color: #4CAF50;
-  color: white;
+/* General Layout Spacing */
+.sensor-config-textbox .sensor-config-row {
+  margin-bottom: 20px;
+}
+
+.sensor-config-textbox .sensor-config-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sensor-config-textbox {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .sensor-config-row {
+    grid-template-columns: 1fr; /* Adjust to stack labels and inputs */
+  }
+}
+
+
+.sensor-config-container {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  padding: 2rem;
+}
+
+.sensor-config-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sensor-config-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.coach-id {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coach-id label {
+  font-weight: 500;
+}
+
+.coach-id input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.save-button {
+  background-color: #0077b6;
+  color: #fff;
   border: none;
-  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
-  font-size: 16px;
-  width: 100%;
-  transition: background-color 0.3s ease;
 }
 
-.coach-no-save button:hover {
-  background-color: #45a049;
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.sensor-item {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.sensor-checkbox {
+  align-self: flex-start;
+}
+
+.sensor-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sensor-details {
+  text-align: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sensor-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.sensor-status {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+.status-indicator.active {
+  background-color: #4caf50;
+}
+
+.status-indicator.inactive {
+  background-color: #ccc;
+}
+
+.sensor-config-section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sensor-config-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sensor-config-textbox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sensor-config-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.sensor-config-row label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.sensor-config-row input,
+.sensor-config-row select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sensor-config-row input:focus,
+.sensor-config-row select:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+}
+
+.sensor-config-row .sensor-placement {
+  grid-column: 1 / -1;
+}
+
+.sensor-config-row .sensor-comments {
+  grid-column: 1 / -1;
+}
+
+.sensor-config-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 5px 10px;
+  align-items: start;
+  margin-bottom: 100px;
+}
+
+.sensor-config-row label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.sensor-config-row input,
+.sensor-config-row select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sensor-config-row .sensor-placement,
+.sensor-config-row .sensor-comments {
+  grid-column: 1 / -1;
+}
+
+.sensor-total-num {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.sensor-total-num label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.sensor-total-num input {
+  width: 24%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-group {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  padding: 10px; /* Reduce padding for smaller height */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px; /* Smaller font size */
+  width: 150px; /* Smaller width */
+  border-radius: 3px;
 }

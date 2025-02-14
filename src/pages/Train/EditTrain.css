@@ -1,0 +1,103 @@
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal is on top */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   /* // width: 400px; /* Set a fixed width for the modal */
+    /* max-width: 90%;  */
+  }
+  
+  /* Heading styles */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Label styles */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  /* Input styles */
+  input[type="text"],
+  input[type="number"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Button styles */
+  button {
+    width: 100%; /* Full width */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  .save-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .close-button {
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-top: 10px; /* Space between buttons */
+  }
+  
+  .close-button:hover {
+    background-color: #e53935; /* Darker red on hover */
+  }
+  
+  /* Loader styles */
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .loader p {
+    margin-right: 10px;
+  }
+  
+  /* Progress bar styles */
+  .progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 5px;
+    width: 100%; /* Adjust this width dynamically based on loading state */
+    background-color: #4CAF50; /* Green */
+  }
